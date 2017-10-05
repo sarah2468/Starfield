@@ -36,7 +36,7 @@ class NormalParticle implements Particle
    myY = 250;
    myDir = Math.random()*(2*PI);
    myColor = 255;
-   Speed = Math.random()*5;
+   Speed = Math.random()*5+2;
    size = (float)(Math.random()*3);
   }
   
@@ -72,13 +72,13 @@ OddballParticle()
 {
   myX = 250;
   myY = 250;
-  myDir = Math.random()*(2*PI);
+  myDir = Math.random()/(2*PI);
   Speed = Math.random()*2;
   
 }
 public void move()
 {
-  myX += Speed*Math.cos(myDir);
+  myX -= Speed*Math.cos(myDir);
   myY -= Speed*Math.sin(myDir);
 }
 public void show()
@@ -90,7 +90,7 @@ public void show()
 public void reset()
 {
   myDir = Math.random()*(2*PI);
-   Speed = Math.random()*5;
+   Speed = Math.random()*2;
    myX = 250;
    myY = 250;
 }
